@@ -16,8 +16,7 @@
 
 "use strict";
 
-// Compatibility for either using tranditional or Node.js way to load JavaScript.
-var React = (window && window.React) || require('react');
+var React = require('react');
 
 var SwitchButton = React.createClass( {
 
