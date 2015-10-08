@@ -7,11 +7,7 @@
  * @class           SwitchButton
  * @author          =undo= <g.fazioli@wpxtre.me>
  * @date            2015-03-02
- * @version         1.0.4
- *
- * @history         1.0.0 First public release
- * @history         1.0.3 Minor fixes
- * @history         1.0.4 @deprecated since 1.0.4 - use labelRight instead - issue #5 https://github.com/gfazioli/react-switch-button/issues/5
+ * @version         1.0.9
  */
 
 "use strict";
@@ -24,7 +20,7 @@ var SwitchButton = React.createClass( {
   displayName : 'Switch Button',
 
   // Version
-  version : '1.0.4',
+  version : '1.0.9',
 
   /**
    * The props types.
@@ -39,7 +35,8 @@ var SwitchButton = React.createClass( {
     defaultChecked : React.PropTypes.string,
     theme          : React.PropTypes.string,
     checked        : React.PropTypes.string,
-    onChange       : React.PropTypes.func
+    onChange       : React.PropTypes.func,
+    disabled       : React.PropTypes.bool
   },
 
 
@@ -60,7 +57,8 @@ var SwitchButton = React.createClass( {
       defaultChecked : '',
       theme          : 'rsbc-switch-button-flat-round',
       checked        : null,
-      onChange       : this.handleChange
+      onChange       : this.handleChange,
+      disabled       : false
     };
   },
 
@@ -104,7 +102,7 @@ var SwitchButton = React.createClass( {
       React.createElement("div", {className: 'rsbc-switch-button ' + this.props.theme}, 
         label, 
         React.createElement("input", {onChange: this.props.onChange, checked: this.props.checked, defaultChecked: this.props.defaultChecked, 
-               id: id, name: this.props.name, type: "checkbox", value: "1"}), 
+               id: id, name: this.props.name, type: "checkbox", value: "1", disabled: this.props.disabled}), 
         React.createElement("label", {htmlFor: id}), 
         labelRight
       )

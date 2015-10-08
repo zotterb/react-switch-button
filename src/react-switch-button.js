@@ -7,7 +7,7 @@
  * @class           SwitchButton
  * @author          =undo= <g.fazioli@wpxtre.me>
  * @date            2015-03-02
- * @version         1.0.8
+ * @version         1.0.9
  */
 
 "use strict";
@@ -20,7 +20,7 @@ var SwitchButton = React.createClass( {
   displayName : 'Switch Button',
 
   // Version
-  version : '1.0.8',
+  version : '1.0.9',
 
   /**
    * The props types.
