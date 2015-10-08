@@ -3,7 +3,7 @@
  *
  * @author          =undo= <g.fazioli@undolog.com>
  * @date            2015-02-17
- * @version         1.0.0
+ * @version         1.0.8
  *
  */
 
@@ -153,4 +153,16 @@
     background-color : @rsbc-theme-flat-color-on-border;
   }
 
+  &.rsbc-switch-button-flat-round input[type="checkbox"][disabled] + label {
+    background-color : darken(@rsbc-theme-flat-color-off, 50%);
+  }
+  &.rsbc-switch-button-flat-round input[type="checkbox"][disabled]:checked + label
+  {
+    background-color : darken(@rsbc-theme-flat-color-off, 50%);
+  }
+  &.rsbc-switch-button-flat-round input[type="checkbox"][disabled]:checked + label:after
+  {
+    margin-left      : 24px;
+    background-color : darken(@rsbc-theme-flat-color-off, 50%);
+  }
 }
