@@ -1,6 +1,6 @@
 {
   "name": "react-switch-button",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "A React UI Component to display an awesome Switch (swipe) Button control",
   "main": "dist/react-switch-button.min.js",
   "scripts": {
@@ -10,7 +10,7 @@
     "build:cp": "./node_modules/.bin/uglifyjs ./dist/react-switch-button.js -o ./dist/react-switch-button.min.js",
     "example": "cp ./dist/*min.* ./example/assets/",
     "example:jsx": "./node_modules/.bin/jsx --harmony ./example/src/ ./example/assets/",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -38,7 +38,13 @@
     "less": "^2.5.1",
     "react": "^0.13.3",
     "react-tools": "^0.13.3",
+    "babel-jest": "*",
+    "jest-cli": "*",
     "requirejs": "~2.1.9",
     "uglify-js": "^2.4.23"
+  },
+  "jest": {
+    "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
+    "unmockedModulePathPatterns": ["<rootDir>/node_modules/react"]
   }
 }

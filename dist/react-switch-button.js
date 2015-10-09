@@ -7,7 +7,7 @@
  * @class           SwitchButton
  * @author          =undo= <g.fazioli@wpxtre.me>
  * @date            2015-03-02
- * @version         1.0.9
+ * @version         1.0.10
  */
 
 "use strict";
@@ -20,7 +20,7 @@ var SwitchButton = React.createClass( {
   displayName : 'Switch Button',
 
   // Version
-  version : '1.0.9',
+  version : '1.0.10',
 
   /**
    * The props types.
@@ -103,7 +103,6 @@ var SwitchButton = React.createClass( {
         label, 
         React.createElement("input", {onChange: this.props.onChange, checked: this.props.checked, defaultChecked: this.props.defaultChecked, 
                id: id, name: this.props.name, type: "checkbox", value: "1", disabled: this.props.disabled}), 
-        React.createElement("label", {htmlFor: id}), 
         labelRight
       )
     );
