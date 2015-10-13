@@ -103,6 +103,7 @@ var SwitchButton = React.createClass( {
         label, 
         React.createElement("input", {onChange: this.props.onChange, checked: this.props.checked, defaultChecked: this.props.defaultChecked, 
                id: id, name: this.props.name, type: "checkbox", value: "1", disabled: this.props.disabled}), 
+        React.createElement("label", {htmlFor: id}), 
         labelRight
       )
     );
