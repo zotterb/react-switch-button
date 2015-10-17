@@ -32,19 +32,26 @@
   },
   "homepage": "https://github.com/gfazioli/react-switch-button",
   "peerDependencies": {
-    "react": "^0.13.3"
+    "react": "^0.14.0"
   },
   "devDependencies": {
-    "less": "^2.5.1",
-    "react": "^0.13.3",
-    "react-tools": "^0.13.3",
+    "less": "*",
+    "react": "^0.14.0",
+    "react-dom": "^0.14.0",
+    "react-tools": "*",
     "babel-jest": "*",
     "jest-cli": "*",
-    "requirejs": "~2.1.9",
-    "uglify-js": "^2.4.23"
+    "requirejs": "*",
+    "uglify-js": "*"
   },
   "jest": {
     "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
-    "unmockedModulePathPatterns": ["<rootDir>/node_modules/react"]
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/react"
+    ]
+  },
+  "dependencies": {
+    "react": "^0.14.0",
+    "react-dom": "^0.14.0"
   }
 }
