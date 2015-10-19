@@ -2,3 +2,5 @@
 /bower_components
 /example/assets/.module-cache
 dist/__tests__/
+dist/.module-cache/
+.idea

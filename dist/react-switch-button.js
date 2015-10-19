@@ -75,7 +75,7 @@ var SwitchButton = React.createClass( {
    */
   render : function()
   {
-    var id, label, labelRight;
+    var id, label, labelRight, labelRightString;
 
     if( this.props.id == '' && this.props.name != '' ) {
       id = this.props.name;
@@ -87,14 +87,17 @@ var SwitchButton = React.createClass( {
       );
     }
 
+    labelRightString = this.props.labelRight;
+
     // @deprecated since 1.0.4 - use labelRight instead - issue #5 https://github.com/gfazioli/react-switch-button/issues/5
-    if( 'undefined' !== this.props.label_right || this.props.label_right != '' ) {
-      this.props.labelRight = this.props.label_right;
+    if( 'undefined' !== this.props.label_right && this.props.label_right != '' ) {
+      //this will override labelRight
+      labelRightString = this.props.label_right;
     }
 
-    if( this.props.labelRight != '' ) {
+    if( labelRightString != '' ) {
       labelRight = (
-        React.createElement("label", {htmlFor: id}, this.props.labelRight)
+        React.createElement("label", {htmlFor: id}, labelRightString)
       );
     }
 
